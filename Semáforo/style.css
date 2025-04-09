@@ -1,0 +1,142 @@
+/* Importa a fonte "Quicksand" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap'); 
+
+/* Define o estilo base para todos os elementos da página */
+* {
+    padding: 0; /* Remove o padding de todos os elementos */
+    margin: 0;  /* Remove a margem de todos os elementos */
+    font-family: 'Quicksand', sans-serif; /* Define a fonte "Quicksand" para todos os elementos */
+}
+
+/* Estilo do corpo da página */
+body {
+    background-color: #fafafa; /* Define a cor de fundo como um tom de cinza claro */
+    display: flex; /* Usado para centralizar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100vh; /* Define a altura da página como 100% da altura da janela */
+    background: url("./img/céu.jpg") no-repeat center center fixed; /* Define uma imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    transition: background 1s ease-in-out; /* Aplica uma transição suave ao fundo */
+}
+
+/* Estilo para a caixa que contém o semáforo */
+.box {
+    display: flex; /* Usado para centralizar os elementos internos */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    flex-direction: column; /* Organiza os elementos de forma vertical */
+    padding: 25px; /* Adiciona espaço interno */
+    width: 250px; /* Largura da caixa */
+    height: 600px; /* Altura da caixa */
+    border-radius: 25px; /* Bordas arredondadas */
+    background-color: rgba(245, 245, 245, 0.979); /* Fundo com leve transparência */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor da caixa */
+    border: 3px solid #ccc; /* Borda fina e discreta */
+    overflow: hidden; /* Evita que o conteúdo ultrapasse os limites da caixa */
+    position: relative; /* Posiciona a caixa de forma relativa */
+}
+
+/* Estilo base para os círculos de cor do semáforo */
+.color {
+    display: flex; /* Usado para centralizar o conteúdo do círculo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    width: 110px; /* Largura do círculo */
+    height: 110px; /* Altura do círculo */
+    border-radius: 50%; /* Tornar o círculo redondo */
+    margin: 25px 0; /* Espaçamento entre os círculos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Efeitos suaves para mudanças */
+    position: relative; /* Posicionamento relativo para efeitos adicionais */
+    background-size: cover; /* Faz a imagem de fundo cobrir o círculo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15); /* Sombra suave ao redor do círculo */
+}
+
+/* Estilos específicos para as cores do semáforo */
+.red {
+    background-color: #ff6f61; /* Cor do semáforo vermelho */
+    box-shadow: 0px 0px 30px rgba(255, 111, 97, 0.4); /* Sombra suave e luminosa para o vermelho */
+}
+
+.yellow {
+    background-color: #f7e19c; /* Cor do semáforo amarelo */
+    box-shadow: 0px 0px 30px rgba(247, 225, 156, 0.4); /* Sombra suave para o amarelo */
+}
+
+.green {
+    background-color: #90e0a1; /* Cor do semáforo verde */
+    box-shadow: 0px 0px 30px rgba(144, 224, 161, 0.4); /* Sombra suave para o verde */
+}
+
+/* Estilo para quando o semáforo está desativado */
+.disable {
+    background-color: #d0d0d0; /* Cor neutra quando o semáforo está desativado */
+    box-shadow: 0px 0px 10px rgba(180, 180, 180, 0.3); /* Sombra mais suave para o semáforo desativado */
+}
+
+/* Estilo do temporizador */
+.timer {
+    display: flex; /* Usado para centralizar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    width: 160px; /* Largura do temporizador */
+    height: 140px; /* Altura do temporizador */
+    font-size: 70px; /* Tamanho grande da fonte do temporizador */
+    font-weight: 500; /* Peso da fonte para um visual mais forte */
+    text-align: center; /* Centraliza o texto */
+    color: #ff6f61; /* Cor do texto (vermelho suave) */
+    border: 8px solid #ff6f61; /* Borda vermelha ao redor do temporizador */
+    border-radius: 25px; /* Bordas arredondadas */
+    padding: 10px; /* Espaço interno */
+    background-color: #f9f9f9; /* Fundo branco do temporizador */
+    box-shadow: 0px 0px 40px rgba(255, 111, 97, 0.3); /* Sombra suave e luminosa ao redor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Efeitos de transição */
+}
+
+/* Efeito quando o mouse passa sobre o temporizador */
+.timer:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do temporizador */
+    box-shadow: 0px 0px 45px rgba(255, 111, 97, 0.5); /* Aumenta o brilho da sombra */
+    background-color: #ff6f61; /* Muda o fundo para vermelho */
+    color: white; /* Muda a cor do texto para branco */
+}
+
+/* Efeito quando o mouse passa sobre os círculos de cor */
+.color:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do círculo */
+    box-shadow: 0px 0px 30px rgba(255, 111, 97, 0.4); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Adiciona efeitos visuais nas transições dos círculos */
+.color::before, .color::after {
+    content: ""; /* Cria elementos pseudo para os efeitos */
+    position: absolute; /* Posiciona os elementos relativos ao círculo */
+    width: 100px; /* Largura dos elementos pseudo */
+    height: 100px; /* Altura dos elementos pseudo */
+    border-radius: 50%; /* Torna os elementos pseudo circulares */
+    background-color: inherit; /* Herda a cor de fundo do círculo */
+    transition: inherit; /* Aplica a transição para os elementos pseudo */
+}
+
+.color::before {
+    left: 0; /* Posiciona o elemento pseudo à esquerda */
+    transform: rotate(-45deg); /* Aplica rotação ao elemento pseudo */
+}
+
+.color::after {
+    right: 0; /* Posiciona o elemento pseudo à direita */
+    transform: rotate(45deg); /* Aplica rotação ao elemento pseudo */
+}
+
+/* Animação do fundo que altera as cores do semáforo */
+@keyframes backgroundAnimation {
+    0% { background-color: #f7e19c; } /* Começa com o fundo amarelo */
+    50% { background-color: #90e0a1; } /* Meia animação com fundo verde */
+    100% { background-color: #ff6f61; } /* Finaliza com fundo vermelho */
+}
+
+/* Aplica a animação do fundo ao passar o mouse sobre o body */
+body:hover {
+    animation: backgroundAnimation 10s ease infinite; /* Animação suave e contínua do fundo */
+}
