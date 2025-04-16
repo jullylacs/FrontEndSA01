@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #d3d0ee;
+    background-color: #d3d0ee; /* Define a cor de fundo do corpo da página como um tom de lilás */
 }
 
 .piano {
@@ -18,7 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 .controls {
@@ -43,20 +43,22 @@ body {
     padding: 4px;
 }
 
-.switcher__button {
-    height: 100%;
-    aspect-ratio: 1/1;
-    background-color: #ddd;
-    border-radius: 25px;
-}
+/* Estilos para o botão dentro do interruptor */
 
+.switcher__button {
+    height: 100%;  /* O botão ocupa toda a altura do interruptor */
+    aspect-ratio: 1/1; /*Ganrante que a altura seja igual a largura*/
+    background-color: #ddd;
+    border-radius: 25px; /*arredonda as bordas criando um circulo*/
+}
+/* Estilos para o interruptor quando está ativo (checkbox marcado) */
 .switcher--active {
     background-color: #7e3054;
-    justify-content: flex-end;
+    justify-content: flex-end;/* Alinha o botão à direita */
 }
 
 .checkbox__label {
-    display: flex;
+    display: flex; /* Usa Flexbox para alinhar o texto e o interruptor */
     gap: 15px;
 }
 
@@ -122,7 +124,7 @@ body {
 }
 
 .black--pressed {
-    background: linear-gradient(#9e4f91, rgb(235, 168, 220));
+    background: linear-gradient(#222, black);
     border-bottom: none;
     height: 148px;
 }

@@ -1,10 +1,15 @@
+// Seleciona todos os elementos HTML com a classe 'key' (as teclas do piano).
 const keys = document.querySelectorAll('.key');
+// Seleciona o checkbox que controla a exibição das letras nas teclas.
 const checkbox = document.querySelector('.checkbox__keys');
+// Seleciona o elemento que representa o interruptor visual do checkbox.
 const switcher = document.querySelector('.switcher');
+// Seleciona a seção que contém todas as teclas do piano.
 const keysSection = document.querySelector('.piano__keys');
 
 const playNote = (note) => {
     const audio = new Audio(`../notes/${note}.wav`);
+    /*inicia o audio*? */
     audio.play();
 }
 
