@@ -122,7 +122,7 @@ body {
 }
 
 .black--pressed {
-    background: linear-gradient(#222, black);
+    background: linear-gradient(#9e4f91, rgb(235, 168, 220));
     border-bottom: none;
     height: 148px;
 }
